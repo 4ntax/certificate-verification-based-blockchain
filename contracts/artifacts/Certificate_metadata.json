@@ -1,0 +1,173 @@
+{
+	"compiler": {
+		"version": "0.4.18+commit.9cf6e910"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "totalDocument",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "documentId",
+						"type": "string"
+					},
+					{
+						"name": "recipient",
+						"type": "string"
+					}
+				],
+				"name": "revokeDocument",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "documentId",
+						"type": "string"
+					},
+					{
+						"name": "recipient",
+						"type": "string"
+					},
+					{
+						"name": "certificateType",
+						"type": "string"
+					}
+				],
+				"name": "verifyDocument",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "documentId",
+						"type": "string"
+					},
+					{
+						"name": "recipient",
+						"type": "string"
+					},
+					{
+						"name": "certificateType",
+						"type": "string"
+					},
+					{
+						"name": "_certifier",
+						"type": "string"
+					}
+				],
+				"name": "issueDocument",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "recipient",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"name": "certificate",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"name": "certifier",
+						"type": "string"
+					}
+				],
+				"name": "DocumentIssued",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"issueDocument(string,string,string,string)": {
+					"details": "Issues document."
+				},
+				"revokeDocument(string,string)": {
+					"details": "Revokes existing document and sets the recipient to 0x0."
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Certificate.sol": "Certificate"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Certificate.sol": {
+			"keccak256": "0xa825b27fb740b5a793f7664d538b74eb2e8739c83ec76f078302fe111733d5d9",
+			"urls": [
+				"bzzr://169ef931389b9157e0c299f4fddc8a0cd822988b62d66987c613b8250c7f2fd8"
+			]
+		}
+	},
+	"version": 1
+}
